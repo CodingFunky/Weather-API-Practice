@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="app.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <form>
+            <label for="inputField">Location</label>
+            <input type="text" id="inputField">
+            <button type="button" onclick="getWeather(document.getElementById('inputField').value)">Submit</button>
+        </form>
+        <form action="/action_page.php" class="dropdownform">
+            <label for="state">Location:</label>
+            <select name="states" id="states">
+                <option value="El Paso">El Paso</option>
+                <option value="Texas">Texas</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Missouri">Missouri</option>
+            </select>
+            <br><br>
+        </form>
+    </div>
+    <div class="content">
+        <div class="cardHeader">
+            <div id="stateName"></div>
+            <div id="lastUpdatedLabel">Last Updated
+                <div id="lastUpdatedInfo"></div>
+            </div>
+        </div>
+        <div id="stateCard">
+            <div id="temp">
+                <div id="tempActual">
+                    <div id="tempNum"></div>
+                </div>
+                <div id="feelsLike">Feels Like
+                    <div id="feelsNum"></div>
+                </div>
+            </div>
+            <div id="clouds">Clouds
+                <div id="cloudsInfo"></div>
+                <img id="cloudsIcon" src="https://openweathermap.org/img/wn/10d@2x.png"></img>
+            </div>
+        </div>
+        <div id="forecast">
+            <div id="forecastHeader"></div>
+            <div id="forecastBody"></div>
+            
+        </div>
+
+    </div>
+</body>
+
+</html>
