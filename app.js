@@ -19,7 +19,7 @@ function getWeather(location) {
     });
 }
 function getForecast(location) {
-  fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}`)
+  fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=4485c2dd8e2b33cd3309b3c3f0fde461`)
     .then(function (response) {
       return response.json();
     })
