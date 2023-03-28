@@ -1,23 +1,6 @@
 const selectStateForm = document.getElementById('states');
 const searchStateForm = document.getElementById('inputField');
 const API_KEY = '4485c2dd8e2b33cd3309b3c3f0fde461'
-// URL (required), options (optional)
-// fetch('https://api.openweathermap.org/data/2.5/weather?q=ElPaso&APPID=4485c2dd8e2b33cd3309b3c3f0fde461',)
-//     .then(function(response) {
-//       return response.json();
-//     })
-//     .then(function(response) {
-//         console.log(response);
-//         // document.querySelector('.content').textContent = response.main.temp
-//         printWeather(response);
-//       })
-//     .catch(function (err) {
-//         console.log('error')
-//     });
-
-// printWeather = function (data) {
-//     document.querySelector('.content').textContent = data.main.temp
-// }
 
 function getWeather(location) {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=4485c2dd8e2b33cd3309b3c3f0fde461`,)
