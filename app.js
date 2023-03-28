@@ -9,8 +9,6 @@ function getWeather(location) {
     })
     .then(function (response) {
       printWeather(response, location);
-    })
-    .then(function (response) {
       getForecast(location);
     })
     .catch(function (err) {
