@@ -88,4 +88,6 @@ body {
 #forecastBody {
     display: flex;
     flex-direction: row;
+    gap: 2em;
 }
+#forecastEle {}
