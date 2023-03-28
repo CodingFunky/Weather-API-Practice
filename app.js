@@ -25,8 +25,6 @@ function getWeather(location) {
       return response.json();
     })
     .then(function (response) {
-      console.log('getWeather response');
-      console.log(response);
       printWeather(response, location);
     })
     .then(function (response) {
@@ -43,8 +41,6 @@ function getForecast(location) {
       return response.json();
     })
     .then(function (response) {
-      console.log('New List: ')
-      console.log(response)
       const list = response.list.filter(item => {
         const date = new Date(item.dt * 1000);
         const today = new Date();
