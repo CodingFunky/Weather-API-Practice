@@ -1,5 +1,3 @@
-const selectStateForm = document.getElementById('states');
-const searchStateForm = document.getElementById('inputField');
 const API_KEY = '4485c2dd8e2b33cd3309b3c3f0fde461'
 
 function getWeather(location) {
@@ -94,7 +92,7 @@ printForecast = function (data, list) {
     dayofweekEle.innerHTML = forecastList[i]
 
     // append created elements to card and then card to HTML element
-    forecastCard.append(forecastTemp, forecastClouds, dayofweekEle)
+    forecastCard.append(dayofweekEle, forecastClouds, forecastTemp)
     document.querySelector('#forecastBody').appendChild(forecastCard);
   }
 }
@@ -103,4 +101,4 @@ printForecast = function (data, list) {
 
 // }
 
-getWeather(selectStateForm.value);
+getWeather('El Paso');
