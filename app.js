@@ -39,10 +39,10 @@ function getForecast(location) {
 }
 printWeather = function (data, location) {
   document.querySelector('#stateName').textContent = location
-  document.querySelector('#tempNum').textContent = Math.round((data.main.temp * 9 / 5) - 459.67) + '°F'
+  document.querySelector('#tempNum').textContent = Math.round((data.main.temp * 9 / 5) - 459.67) + '°'
   // document.querySelector('#cloudsInfo').textContent = data.clouds.all
   document.querySelector('#cloudsIcon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`
-  document.querySelector('#feelsNum').textContent = Math.round((data.main.feels_like * 9 / 5) - 459.67) + '°F'
+  document.querySelector('#feelsNum').textContent = Math.round((data.main.feels_like * 9 / 5) - 459.67) + '°'
   let unixTimestamp = data.dt
   let dateObj = new Date(unixTimestamp * 1000)
   const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'medium' });
@@ -67,7 +67,7 @@ printForecast = function (data, list) {
     // get temp info
     const forecastTemp = document.createElement("div");
     forecastTemp.classList = 'forecast-temp';
-    forecastTemp.innerHTML = Math.round((data.list[i].main.temp * 9 / 5) - 459.67) + '°F'
+    forecastTemp.innerHTML = Math.round((data.list[i].main.temp * 9 / 5) - 459.67) + '°'
 
     // get day of the week
     const dayofweekEle = document.createElement("div");
