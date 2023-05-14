@@ -41,7 +41,7 @@ printWeather = function (data, location) {
   document.querySelector('#stateName').textContent = location
   document.querySelector('#tempNum').textContent = Math.round((data.main.temp * 9 / 5) - 459.67) + '°F'
   // document.querySelector('#cloudsInfo').textContent = data.clouds.all
-  document.querySelector('#cloudsIcon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png?size=1228`
+  document.querySelector('#cloudsIcon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`
   document.querySelector('#feelsNum').textContent = Math.round((data.main.feels_like * 9 / 5) - 459.67) + '°F'
   let unixTimestamp = data.dt
   let dateObj = new Date(unixTimestamp * 1000)
