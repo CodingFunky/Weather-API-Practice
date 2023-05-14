@@ -77,7 +77,7 @@ printForecast = function (data, list) {
 
     // generate list
     const today = new Date();
-    document.querySelector('#dayName').innerHTML = daysOfWeek[today.getDay()]
+    document.querySelector('#dayOfWeek').innerHTML = daysOfWeek[today.getDay()]
     const forecastList = []
     for (let i = 0; i < 7; i++) {
       const date = new Date()
