@@ -130,8 +130,6 @@ body {
         /* overflow: hidden; */
         margin: 0;
         padding: 0;
-        background-image: url("background.png");
-        background-color: lightblue;
       }
       .content {
         margin-top: 0;
