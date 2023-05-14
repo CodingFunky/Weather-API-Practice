@@ -115,7 +115,7 @@ body {
     font-size: 1em;
 }
 #cloudsIcon {
-    align-self: self-start;
+    align-self: self-end;
 }
 #forecast {
     display: flex;
