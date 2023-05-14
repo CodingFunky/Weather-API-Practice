@@ -92,7 +92,7 @@ printForecast = function (data, list) {
     dayofweekEle.innerHTML = forecastList[i]
 
     // append created elements to card and then card to HTML element
-    forecastCard.append(dayofweekEle, forecastClouds, forecastTemp)
+    forecastCard.append(dayofweekEle, forecastTemp, forecastClouds)
     document.querySelector('#forecast').appendChild(forecastCard);
   }
 }
