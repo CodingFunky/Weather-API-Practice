@@ -50,9 +50,9 @@ printWeather = function (data, location) {
   document.querySelector('#lastUpdatedInfo').textContent = dateString
 }
 printForecast = function (data, list) {
-  const forecastBody = document.querySelector('#forecastBody')
-  while (forecastBody.firstChild) {
-    forecastBody.removeChild(forecastBody.firstChild);
+  const forecast = document.querySelector('#forecast')
+  while (forecast.firstChild) {
+    forecast.removeChild(forecast.firstChild);
   }
   for (let i = 0; i <= 5; i++) {
     // make card
@@ -93,7 +93,7 @@ printForecast = function (data, list) {
 
     // append created elements to card and then card to HTML element
     forecastCard.append(dayofweekEle, forecastClouds, forecastTemp)
-    document.querySelector('#forecastBody').appendChild(forecastCard);
+    document.querySelector('#forecast').appendChild(forecastCard);
   }
 }
 
